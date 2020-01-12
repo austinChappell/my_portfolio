@@ -6,6 +6,7 @@ import { colors, space } from '../../constants';
 type FontColor = 'black' | 'white' | 'brand';
 type FontSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 interface Props {
+  alignment?: 'left' | 'center' | 'right';
   as?: string;
   fontColor?: FontColor;
   fontSize?: FontSize;
@@ -35,11 +36,13 @@ function getStyle(props: Props) {
     fontSize: props.fontSize && fontSizes[props.fontSize],
     margin: 0,
     padding: `${space.sm}px 0`,
+    textAlign: props.alignment,
   };
 }
 
 // Component Definition
 const Text: React.FC<Props> = ({
+  alignment = 'left',
   as = 'p',
   children,
   fontColor,
@@ -47,16 +50,18 @@ const Text: React.FC<Props> = ({
   ...props
 }) => {
   const [style, setStyle] = useState(getStyle({
+    alignment,
     fontColor,
     fontSize,
   }));
 
   useEffect(() => {
     setStyle(getStyle({
+      alignment,
       fontColor,
       fontSize,
     }));
-  }, [fontColor, fontSize])
+  }, [alignment, fontColor, fontSize])
 
   return React.createElement(as, {
     children,
