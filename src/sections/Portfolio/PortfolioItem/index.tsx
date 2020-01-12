@@ -7,9 +7,10 @@ import DesktopPreview from './DesktopPreview';
 import Details, { DetailsProps } from './Details';
 import Card from '../../../components/Card';
 import Text from '../../../components/Text';
+import Links, { LinksProps } from './Links';
 
 // Local Typings
-interface Props extends DetailsProps {
+interface Props extends DetailsProps, LinksProps {
   description: string;
   imageAltName: string;
   imageFileName: string;
@@ -42,6 +43,11 @@ const PortfolioItem: React.FC<Props> = (props) => {
           >
             {props.title}
           </Text>
+
+          <Links
+            githubLink={props.githubLink}
+            siteLink={props.siteLink}
+          />
 
           <DesktopPreview
             screenshotProps={{
