@@ -10,6 +10,7 @@ interface Props {
   as?: string;
   fontColor?: FontColor;
   fontSize?: FontSize;
+  padding?: number;
 }
 
 // Local Variables
@@ -36,7 +37,7 @@ function getStyle(props: Props) {
     color: props.fontColor && fontColors[props.fontColor],
     fontSize: props.fontSize && fontSizes[props.fontSize],
     margin: 0,
-    padding: `${space.sm}px 0`,
+    padding: `${props.padding}px 0`,
     textAlign: props.alignment,
   };
 }
@@ -48,12 +49,14 @@ const Text: React.FC<Props> = ({
   children,
   fontColor,
   fontSize,
+  padding = space.sm,
   ...props
 }) => {
   const [style, setStyle] = useState(getStyle({
     alignment,
     fontColor,
     fontSize,
+    padding,
   }));
 
   useEffect(() => {
@@ -61,8 +64,9 @@ const Text: React.FC<Props> = ({
       alignment,
       fontColor,
       fontSize,
+      padding,
     }));
-  }, [alignment, fontColor, fontSize])
+  }, [alignment, fontColor, fontSize, padding])
 
   return React.createElement(as, {
     children,
