@@ -3,7 +3,10 @@ import React from 'react';
 
 // Internal Dependencies
 import Section from '../../components/Section';
-import { ids } from '../../constants';
+import {
+  colors,
+  ids,
+} from '../../constants';
 import PortfolioItem from './PortfolioItem';
 import PortfolioItemList from './PortfolioItemList';
 import Container from '../../components/Container';
@@ -58,7 +61,10 @@ const portfolioItems: SinglePortfolioItem[] = [
 // Component Definition
 const Portfolio: React.FC = () => {
   return (
-    <Section id={ids.portfolio}>
+    <Section
+      backgroundColor={colors.gray05}
+      id={ids.portfolio}
+    >
       <Container>
         <SectionTitle>
           Portfolio

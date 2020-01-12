@@ -10,7 +10,7 @@ export const colors = {
   gray70: '#999999',
   gray80: '#777777',
   gray90: '#555555',
-  secondary: '#59A7FF',
-  secondaryDark: '#364B9C',
+  secondary: '#516FE8',
+  secondaryDark: '#364b9c',
   white: '#ffffff'
 };

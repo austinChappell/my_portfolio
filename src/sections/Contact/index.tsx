@@ -12,7 +12,7 @@ import {
 const Contact: React.FC = () => {
   return (
     <Section
-      backgroundColor={colors.gray05}
+      backgroundColor={colors.secondaryDark}
       id={ids.contact}
     >
       Contact Section
