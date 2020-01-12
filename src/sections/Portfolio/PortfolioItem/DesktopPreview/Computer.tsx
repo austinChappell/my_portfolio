@@ -16,7 +16,7 @@ const ScreenWrapper = styled.div({
 });
 const ScreenGloss = styled.div({
   background: `linear-gradient(-45deg, ${colors.white} 0%, white 27%, transparent 29%)`,
-  opacity: 0.5,
+  opacity: 0.2,
   position: 'absolute',
   top: 0,
   left: 0,
