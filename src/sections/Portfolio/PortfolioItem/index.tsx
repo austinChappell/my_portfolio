@@ -5,6 +5,10 @@ import React from 'react';
 // Internal Dependencies
 import DesktopPreview from './DesktopPreview';
 import Details, { DetailsProps } from './Details';
+import {
+  colors,
+  space,
+} from '../../../constants';
 
 // Local Typings
 interface Props extends DetailsProps {
@@ -16,6 +20,11 @@ interface Props extends DetailsProps {
 const Wrapper = styled.div({
   display: 'flex',
   margin: 20,
+
+  '&:not(:last-child)': {
+    borderBottom: `1px solid ${colors.gray10}`,
+    paddingBottom: space.xl,
+  },
 });
 
 // Component Definition
