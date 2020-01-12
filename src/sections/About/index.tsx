@@ -2,8 +2,8 @@
 import React from 'react';
 
 // Internal Dependencies
-import Section from '../components/Section';
-import { ids } from '../constants';
+import Section from '../../components/Section';
+import { ids } from '../../constants';
 
 // Component Definition
 const About: React.FC = () => {

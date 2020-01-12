@@ -2,22 +2,22 @@
 import React from 'react';
 
 // Internal Dependencies
-import Section from '../components/Section';
+import Section from '../../components/Section';
 import {
   colors,
   ids,
-} from '../constants';
+} from '../../constants';
 
 // Component Definition
-const Contact: React.FC = () => {
+const Skills: React.FC = () => {
   return (
     <Section
       backgroundColor={colors.gray05}
-      id={ids.contact}
+      id={ids.skills}
     >
-      Contact Section
+      Skills Section
     </Section>
   )
 }
 
-export default Contact;
+export default Skills;
