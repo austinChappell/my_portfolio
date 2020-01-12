@@ -85,7 +85,7 @@ const WelcomeTitle: React.FC = () => {
             return (
               <Text
                 as="span"
-                fontColor="brand"
+                fontColor="brandLight"
                 key={`${char.charArray?.join('')}-${charArrIndex}`}
               >
                 {char.charArray.map((char, charIndex) => {

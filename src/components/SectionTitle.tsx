@@ -16,7 +16,7 @@ const SectionTitle: React.FC = (props) => (
   <StyledText
     alignment="center"
     as="h2"
-    fontColor="secondary"
+    fontColor="brand"
     fontSize="xxl"
     padding={space.xl}
   >

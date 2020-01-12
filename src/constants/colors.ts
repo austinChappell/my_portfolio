@@ -1,7 +1,8 @@
 export const colors = {
   black: '#222222',
-  brand: '#bada55',
-  brandDark: '#7a8f38',
+  brand: '#364B9C',
+  brandDark: '#2E3E82',
+  brandLight: '#516FE8',
   gray05: '#f5f5f5',
   gray10: '#eeeeee',
   gray20: '#dddddd',
@@ -10,7 +11,5 @@ export const colors = {
   gray70: '#999999',
   gray80: '#777777',
   gray90: '#555555',
-  secondary: '#516FE8',
-  secondaryDark: '#364b9c',
   white: '#ffffff'
 };

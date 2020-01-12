@@ -12,7 +12,7 @@ import {
 const Skills: React.FC = () => {
   return (
     <Section
-      backgroundColor={colors.secondaryDark}
+      backgroundColor={colors.brandDark}
       id={ids.skills}
     >
       Skills Section

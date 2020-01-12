@@ -21,7 +21,7 @@ const Wrapper = styled.div({
   marginTop: space.md,
 });
 const Link = styled.a({
-  backgroundColor: colors.secondaryDark,
+  backgroundColor: colors.brand,
   borderRadius: space.xs,
   color: colors.white,
   margin: space.xs,
@@ -32,7 +32,7 @@ const Link = styled.a({
   transition: '300ms',
 
   '&:hover': {
-    backgroundColor: `${colors.secondaryDark}dd`,
+    backgroundColor: `${colors.brand}dd`,
   },
 
   '&:visited': {

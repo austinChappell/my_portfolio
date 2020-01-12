@@ -29,8 +29,8 @@ const List = styled.ul({
 });
 const ListItem = styled.li({
   alignItems: 'center',
-  borderBottom: `2px solid ${colors.secondaryDark}`,
-  color: colors.secondaryDark,
+  borderBottom: `2px solid ${colors.brand}`,
+  color: colors.brand,
   display: 'flex',
   marginRight: space.lg,
   padding: `${space.xs}px`,
