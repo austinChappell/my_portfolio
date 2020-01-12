@@ -27,6 +27,7 @@ const Wrapper = styled.nav({
   padding: `0 ${space.xl}px`,
   position: 'sticky',
   top: 0,
+  zIndex: 1,
 });
 
 // Component Definition

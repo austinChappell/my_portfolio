@@ -12,9 +12,18 @@ const ScreenWrapper = styled.div({
   backgroundColor: colors.black,
   border: `8px solid ${colors.black}`,
   borderRadius,
+  position: 'relative',
+});
+const ScreenGloss = styled.div({
+  background: `linear-gradient(-45deg, ${colors.white} 0%, white 27%, transparent 29%)`,
+  opacity: 0.5,
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
 });
 const ComputerBottom = styled.div({
-  // alignItems: 'center',
   backgroundColor: computerTrimColor,
   border: `1px solid ${colors.gray50}`,
   borderBottomLeftRadius: 4,
@@ -56,6 +65,8 @@ const Computer: React.FC = (props) => {
         <ComputerWrapper>
           <ScreenWrapper>
             {props.children}
+
+            <ScreenGloss />
           </ScreenWrapper>
         </ComputerWrapper>
       </ComputerTrim>
