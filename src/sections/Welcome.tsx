@@ -1,4 +1,5 @@
 // External Dependencies
+import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
@@ -9,10 +10,17 @@ import {
 } from '../constants';
 import Text from '../components/Text';
 
+// Local Variables
+const StyledSection = styled(Section)({
+  alignItems: 'center',
+  display: 'flex',
+  justifyContent: 'center',
+});
+
 // Component Definition
 const Welcome: React.FC = () => {
   return (
-    <Section
+    <StyledSection
       backgroundColor={colors.black}
       id={ids.welcome}
     >
@@ -33,7 +41,7 @@ const Welcome: React.FC = () => {
         <br />
         a Full-Stack Developer...
       </Text>
-    </Section>
+    </StyledSection>
   )
 }
 
