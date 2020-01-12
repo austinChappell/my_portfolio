@@ -43,12 +43,12 @@ const ComputerBottomCircle = styled.div({
 const ComputerWrapper = styled.div({
   backgroundColor: computerTrimColor,
   border: `2px solid ${computerTrimColor}`,
-  borderRadius,
+  borderRadius: borderRadius + 2,
 });
 const ComputerTrim = styled.div({
   backgroundColor: colors.gray50,
   border: `1px solid ${colors.gray50}`,
-  borderRadius,
+  borderRadius: borderRadius + 2,
   margin: '0 auto',
   width: '90%',
 });
