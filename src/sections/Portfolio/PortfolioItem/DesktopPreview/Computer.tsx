@@ -6,7 +6,7 @@ import React from 'react';
 import { colors, space } from '../../../../constants';
 
 // Local Variables
-const borderRadius = 4;
+const borderRadius = 8;
 const computerTrimColor = colors.gray20;
 const ScreenWrapper = styled.div({
   backgroundColor: colors.black,
@@ -14,30 +14,34 @@ const ScreenWrapper = styled.div({
   borderRadius,
 });
 const ComputerBottom = styled.div({
-  alignItems: 'center',
+  // alignItems: 'center',
   backgroundColor: computerTrimColor,
-  borderBottomLeftRadius: borderRadius,
-  borderBottomRightRadius: borderRadius,
+  border: `1px solid ${colors.gray50}`,
+  borderBottomLeftRadius: 4,
+  borderBottomRightRadius: 4,
   display: 'flex',
   justifyContent: 'center',
-  height: 20,
+  height: 6,
+  marginTop: -2,
 });
 const ComputerBottomCircle = styled.div({
-  backgroundColor: colors.black,
-  borderRadius: 10,
-  height: 10,
-  width: 10,
+  backgroundColor: colors.gray90,
+  borderBottomLeftRadius: 4,
+  borderBottomRightRadius: 4,
+  height: 3,
+  width: 50,
 })
 const ComputerWrapper = styled.div({
   backgroundColor: computerTrimColor,
   border: `2px solid ${computerTrimColor}`,
-  borderTopLeftRadius: borderRadius,
-  borderTopRightRadius: borderRadius,
+  borderRadius,
 });
 const ComputerTrim = styled.div({
   backgroundColor: colors.gray50,
   border: `1px solid ${colors.gray50}`,
   borderRadius,
+  margin: '0 auto',
+  width: '90%',
 });
 const Container = styled.div({
   margin: `${space.md}px auto`,
@@ -54,11 +58,11 @@ const Computer: React.FC = (props) => {
             {props.children}
           </ScreenWrapper>
         </ComputerWrapper>
-
-        <ComputerBottom>
-          <ComputerBottomCircle />
-        </ComputerBottom>
       </ComputerTrim>
+
+      <ComputerBottom>
+        <ComputerBottomCircle />
+      </ComputerBottom>
     </Container>
   )
 }
