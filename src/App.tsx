@@ -1,25 +1,34 @@
+// External Dependencies
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+// Internal Dependencies
+import Welcome from './sections/Welcome';
+import Portfolio from './sections/Portfolio';
+import Skills from './sections/Skills';
+import About from './sections/About';
+import Contact from './sections/Contact';
+import Nav from './components/Nav';
+
+// Component Definition
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Welcome />
+
+      <Nav
+        navItems={[
+          { label: 'Portfolio' },
+          { label: 'Skills' },
+          { label: 'About' },
+          { label: 'Contact' },
+        ]}
+      />
+
+      <Portfolio />
+      <Skills />
+      <About />
+      <Contact />
+    </main>
   );
 }
 
