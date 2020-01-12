@@ -6,6 +6,7 @@ import Section from '../../components/Section';
 import { ids } from '../../constants';
 import PortfolioItem from './PortfolioItem';
 import Container from '../../components/Container';
+import SectionTitle from '../../components/SectionTitle';
 
 // Local Variables
 const portfolioItems = [
@@ -40,6 +41,10 @@ const Portfolio: React.FC = () => {
   return (
     <Section id={ids.portfolio}>
       <Container>
+        <SectionTitle>
+          Portfolio
+        </SectionTitle>
+
         {portfolioItems.map(item => (
           <PortfolioItem
             description={item.description}
