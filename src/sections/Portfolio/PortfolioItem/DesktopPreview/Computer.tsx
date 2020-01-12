@@ -24,7 +24,7 @@ const ScreenGloss = styled.div({
   bottom: 0,
 });
 const ComputerBottom = styled.div({
-  backgroundColor: computerTrimColor,
+  background: `linear-gradient(180deg, ${computerTrimColor} 0%, ${computerTrimColor} 50%, ${colors.gray70} 100%)`,
   border: `1px solid ${colors.gray50}`,
   borderBottomLeftRadius: 4,
   borderBottomRightRadius: 4,
@@ -34,7 +34,7 @@ const ComputerBottom = styled.div({
   marginTop: -2,
 });
 const ComputerBottomCircle = styled.div({
-  backgroundColor: colors.gray90,
+  backgroundColor: colors.gray70,
   borderBottomLeftRadius: 4,
   borderBottomRightRadius: 4,
   height: 3,
