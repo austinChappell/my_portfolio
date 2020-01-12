@@ -6,6 +6,7 @@ const PortfolioItemList = styled.ul({
   alignItems: 'stretch',
   display: 'flex',
   flexWrap: 'wrap',
+  justifyContent: 'center',
   listStyle: 'none',
   padding: 0,
 });
