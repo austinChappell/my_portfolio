@@ -1,6 +1,6 @@
 // External Dependencies
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useRef } from 'react';
 import { colors, space } from '../../constants';
 
 // Internal Dependencies
@@ -17,8 +17,16 @@ export interface NavItemProps {
 const ListItem = styled.li({
   border: `1px solid ${colors.white}`,
   color: colors.white,
+  cursor: 'pointer',
   marginRight: space.md,
+  outlineColor: colors.white,
   padding: `${space.xs}px ${space.sm}px`,
+  transition: '300ms',
+
+  '&:hover': {
+    backgroundColor: colors.white,
+    color: colors.black,
+  },
 
   '&:last-child': {
     marginRight: 0,
@@ -27,19 +35,32 @@ const ListItem = styled.li({
 
 // Component Definition
 const NavItem: React.FC<NavItemProps> = (props) => {
-  function handleClick() {
+  const ref = useRef<HTMLLIElement>(null);
+
+  function handleBlur() {
+    ref.current?.blur();
+  }
+
+  function handleScroll() {
     scrollToElement(props.scrollToSelector);
+    handleBlur();
+  }
+
+  function handleClick() {
+    handleScroll();
   }
 
   function handleKeyDown({ keyCode }: React.KeyboardEvent) {
-    if (keyCode === KeyCodes.Enter || keyCode === KeyCodes.Space)
-    scrollToElement(props.scrollToSelector);
+    if (keyCode === KeyCodes.Enter || keyCode === KeyCodes.Space) {
+      handleScroll();
+    }
   }
 
   return (
     <ListItem
       onClick={handleClick}
       onKeyDown={handleKeyDown}
+      ref={ref}
       role="button"
       tabIndex={0}
     >

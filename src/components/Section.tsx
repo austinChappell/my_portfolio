@@ -12,12 +12,12 @@ interface Props {
 // Component Definition
 const Section = styled.section<Props>(props => ({
   backgroundColor: props.backgroundColor,
-  height: '100vh',
+  minHeight: '100vh',
   paddingTop: navHeight,
   width: '100vw',
 
   '&:first-of-type': {
-    height: `calc(100vh - ${navHeight}px)`,
+    minHeight: `calc(100vh - ${navHeight}px)`,
     paddingTop: 0,
   },
 }));
