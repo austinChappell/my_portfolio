@@ -1,9 +1,15 @@
 // External Dependencies
+import { CSSObject } from '@emotion/styled';
 import React, { useState, useEffect } from 'react';
-import { colors, space } from '../../constants';
+
+// Internal Dependencies
+import {
+  colors,
+  space,
+} from '../../constants';
 
 // Local Typings
-type FontColor = 'black' | 'white' | 'brand';
+type FontColor = 'black' | 'white' | 'brand' | 'secondary';
 type FontSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 interface Props {
   alignment?: 'left' | 'center' | 'right';
@@ -11,6 +17,7 @@ interface Props {
   fontColor?: FontColor;
   fontSize?: FontSize;
   padding?: number;
+  style?: CSSObject;
 }
 
 // Local Variables
@@ -19,6 +26,7 @@ const fontColors: {
 } = {
   black: colors.black,
   brand: colors.brand,
+  secondary: colors.secondaryDark,
   white: colors.white,
 };
 const fontSizes: {
@@ -32,7 +40,7 @@ const fontSizes: {
   xxl: 32,
 };
 
-function getStyle(props: Props) {
+function getCss(props: Props) {
   return {
     color: props.fontColor && fontColors[props.fontColor],
     fontSize: props.fontSize && fontSizes[props.fontSize],
@@ -50,9 +58,10 @@ const Text: React.FC<Props> = ({
   fontColor,
   fontSize,
   padding = space.sm,
+  style = {},
   ...props
 }) => {
-  const [style, setStyle] = useState(getStyle({
+  const [css, setCss] = useState(getCss({
     alignment,
     fontColor,
     fontSize,
@@ -60,7 +69,7 @@ const Text: React.FC<Props> = ({
   }));
 
   useEffect(() => {
-    setStyle(getStyle({
+    setCss(getCss({
       alignment,
       fontColor,
       fontSize,
@@ -71,7 +80,10 @@ const Text: React.FC<Props> = ({
   return React.createElement(as, {
     children,
     ...props,
-    style,
+    style: {
+      ...css,
+      ...style,
+    },
   })
 }
 

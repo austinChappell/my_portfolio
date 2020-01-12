@@ -29,8 +29,8 @@ const List = styled.ul({
 });
 const ListItem = styled.li({
   alignItems: 'center',
-  backgroundColor: colors.secondaryDark,
-  color: colors.white,
+  borderBottom: `2px solid ${colors.secondaryDark}`,
+  color: colors.secondaryDark,
   display: 'flex',
   marginRight: space.lg,
   padding: `${space.xs}px`,
@@ -44,7 +44,7 @@ const Details: React.FC<DetailsProps> = (props) => {
         {props.technologies.map(technology => (
           <ListItem key={technology}>
             <Text
-              as="span"
+              as="h6"
               fontSize="sm"
               padding={0}
             >

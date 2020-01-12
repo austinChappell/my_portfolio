@@ -1,17 +1,27 @@
 // External Dependencies
+import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
 import Text from './Text';
+import { space } from '../constants';
+
+// Local Variables
+const StyledText = styled(Text)({
+  paddingTop: space.lg,
+});
 
 // Component Definition
 const SectionTitle: React.FC = (props) => (
-  <Text
+  <StyledText
+    alignment="center"
     as="h2"
-    fontSize="xl"
+    fontColor="secondary"
+    fontSize="xxl"
+    padding={space.xl}
   >
     {props.children}
-  </Text>
+  </StyledText>
 );
 
 export default SectionTitle;
