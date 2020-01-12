@@ -82,7 +82,7 @@ const Welcome: React.FC = () => {
         alignment="center"
         as="h1"
         fontColor="white"
-        fontSize="xl"
+        fontSize="xxl"
       >
         {characters.map((charSet, index) => {
           if (charSet.length === 0) {

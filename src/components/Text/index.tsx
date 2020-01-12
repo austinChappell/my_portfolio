@@ -4,7 +4,7 @@ import { colors, space } from '../../constants';
 
 // Local Typings
 type FontColor = 'black' | 'white' | 'brand';
-type FontSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+type FontSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 interface Props {
   alignment?: 'left' | 'center' | 'right';
   as?: string;
@@ -28,6 +28,7 @@ const fontSizes: {
   md: 16,
   lg: 20,
   xl: 24,
+  xxl: 32,
 };
 
 function getStyle(props: Props) {
