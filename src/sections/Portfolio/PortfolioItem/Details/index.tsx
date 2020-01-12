@@ -29,7 +29,7 @@ const List = styled.ul({
 });
 const ListItem = styled.li({
   alignItems: 'center',
-  backgroundColor: colors.brandDark,
+  backgroundColor: colors.secondaryDark,
   color: colors.white,
   display: 'flex',
   marginRight: space.lg,
