@@ -9,12 +9,25 @@ import {
   ids,
 } from '../../constants';
 import WelcomeTitle from './WelcomeTitle';
+import watermarkLogo from '../../assets/images/watermark_logo.svg';
 
 // Local Variables
-const StyledSection = styled(Section)({
+const FullAbsolute = styled.div({
   alignItems: 'center',
+  backgroundImage: `url(${watermarkLogo})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: '50% 50%',
+  backgroundSize: 200,
   display: 'flex',
   justifyContent: 'center',
+  position: 'absolute',
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+})
+const StyledSection = styled(Section)({
+  position: 'relative',
 });
       
 // Component Definition
@@ -24,7 +37,9 @@ const Welcome: React.FC = () => {
       backgroundColor={colors.black}
       id={ids.welcome}
     >
-      <WelcomeTitle />
+      <FullAbsolute>
+        <WelcomeTitle />
+      </FullAbsolute>
     </StyledSection>
   )
 }
