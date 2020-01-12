@@ -8,18 +8,18 @@ import { space, colors } from '../../../../constants';
 
 // Local Typings
 export interface DetailsProps {
-  description: string;
   technologies: string[];
   title: string;
 }
 
 // Local Variables
 const Wrapper = styled.div({
-  // alignItems: 'flex-end',
+  alignItems: 'center',
+  borderBottom: `1px solid ${colors.gray10}`,
   display: 'flex',
-  // justifyContent: 'space-between',
   flexDirection: 'column',
-  marginLeft: space.xl,
+  marginTop: space.xl,
+  paddingBottom: space.md,
   width: '100%',
 });
 const List = styled.ul({
@@ -34,23 +34,12 @@ const ListItem = styled.li({
   display: 'flex',
   marginRight: space.lg,
   padding: `${space.xs}px`,
-})
+});
 
 // Component Definition
 const Details: React.FC<DetailsProps> = (props) => {
   return (
     <Wrapper>
-      <Text
-        as="h2"
-        fontSize="lg"
-      >
-        {props.title}
-      </Text>
-
-      <Text as="p">
-        {props.description}
-      </Text>
-
       <List>
         {props.technologies.map(technology => (
           <ListItem key={technology}>

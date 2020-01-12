@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
-import { colors } from '../../../../constants';
+import { colors, space } from '../../../../constants';
 
 // Local Variables
 const borderRadius = 4;
@@ -40,6 +40,7 @@ const ComputerTrim = styled.div({
   borderRadius,
 });
 const Container = styled.div({
+  margin: `${space.md}px auto`,
   width: 300,
 })
 

@@ -5,6 +5,7 @@ import React from 'react';
 import Section from '../../components/Section';
 import { ids } from '../../constants';
 import PortfolioItem from './PortfolioItem';
+import PortfolioItemList from './PortfolioItemList';
 import Container from '../../components/Container';
 import SectionTitle from '../../components/SectionTitle';
 
@@ -45,16 +46,18 @@ const Portfolio: React.FC = () => {
           Portfolio
         </SectionTitle>
 
-        {portfolioItems.map(item => (
-          <PortfolioItem
-            description={item.description}
-            imageAltName={item.label}
-            imageFileName={item.fileName}
-            key={item.label}
-            technologies={item.technologies}
-            title={item.label}
-          />
-        ))}
+        <PortfolioItemList>
+          {portfolioItems.map(item => (
+            <PortfolioItem
+              description={item.description}
+              imageAltName={item.label}
+              imageFileName={item.fileName}
+              key={item.label}
+              technologies={item.technologies}
+              title={item.label}
+            />
+          ))}
+        </PortfolioItemList>
       </Container>
     </Section>
   )
