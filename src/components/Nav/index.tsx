@@ -4,8 +4,12 @@ import React from 'react';
 
 // Internal Dependencies
 import NavItem, { NavItemProps } from './NavItem';
+import Container from '../Container';
 import NavItemList from './NavItemList';
-import { colors } from '../../constants';
+import {
+  colors,
+  space,
+} from '../../constants';
 
 // Local Typings
 interface Props {
@@ -20,6 +24,7 @@ const Wrapper = styled.nav({
   backgroundColor: colors.black,
   display: 'flex',
   height: navHeight,
+  padding: `0 ${space.xl}px`,
   position: 'sticky',
   top: 0,
 });
@@ -28,14 +33,16 @@ const Wrapper = styled.nav({
 const Nav: React.FC<Props> = (props) => {
   return (
     <Wrapper>
-      <NavItemList>
-        {props.navItems.map(navItem => (
-          <NavItem
-            key={navItem.label}
-            {...navItem}
-          />
-        ))}
-      </NavItemList>
+      <Container>
+        <NavItemList>
+          {props.navItems.map(navItem => (
+            <NavItem
+              key={navItem.label}
+              {...navItem}
+            />
+          ))}
+        </NavItemList>
+      </Container>
     </Wrapper>
   )
 }

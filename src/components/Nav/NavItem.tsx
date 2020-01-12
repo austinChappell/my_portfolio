@@ -5,6 +5,7 @@ import { colors, space } from '../../constants';
 
 // Internal Dependencies
 import { scrollToElement } from './helpers';
+import { KeyCodes } from '../../types/keyCodes';
 
 // Local Typings
 export interface NavItemProps {
@@ -30,8 +31,18 @@ const NavItem: React.FC<NavItemProps> = (props) => {
     scrollToElement(props.scrollToSelector);
   }
 
+  function handleKeyDown({ keyCode }: React.KeyboardEvent) {
+    if (keyCode === KeyCodes.Enter || keyCode === KeyCodes.Space)
+    scrollToElement(props.scrollToSelector);
+  }
+
   return (
-    <ListItem onClick={handleClick}>
+    <ListItem
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+    >
       {props.label}
     </ListItem>
   )
