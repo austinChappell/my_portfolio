@@ -6,7 +6,7 @@ import React from 'react';
 import { colors, space } from '../../../../constants';
 
 // Local Variables
-const borderRadius = 8;
+const borderRadius = 6;
 const computerTrimColor = colors.gray20;
 const ScreenWrapper = styled.div({
   backgroundColor: colors.black,
