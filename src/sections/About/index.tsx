@@ -7,6 +7,7 @@ import {
   colors,
   ids,
 } from '../../constants';
+import SectionTitle from '../../components/SectionTitle';
 
 // Component Definition
 const About: React.FC = () => {
@@ -15,7 +16,9 @@ const About: React.FC = () => {
       backgroundColor={colors.gray05}
       id={ids.about}
     >
-      About Section
+      <SectionTitle>
+        About
+      </SectionTitle>
     </Section>
   )
 }
