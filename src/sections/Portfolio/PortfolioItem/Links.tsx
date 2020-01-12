@@ -18,16 +18,25 @@ export interface LinksProps {
 const Wrapper = styled.div({
   display: 'flex',
   justifyContent: 'center',
+  marginTop: space.md,
 });
 const Link = styled.a({
-  border: `1px solid ${colors.black}`,
-  color: colors.black,
+  backgroundColor: colors.secondaryDark,
+  borderRadius: space.xs,
+  color: colors.white,
   margin: space.xs,
+  minWidth: 100,
   padding: space.xs,
+  textAlign: 'center',
   textDecoration: 'none',
+  transition: '300ms',
+
+  '&:hover': {
+    backgroundColor: `${colors.secondaryDark}dd`,
+  },
 
   '&:visited': {
-    color: colors.black,
+    color: colors.white,
   },
 });
 
@@ -39,14 +48,14 @@ const Links: React.FC<LinksProps> = (props) => {
         href={props.githubLink}
         target="_blank"
       >
-        Code
+        View Code
       </Link>
 
       <Link
         href={props.siteLink}
         target="_blank"
       >
-        Site
+        Visit Site
       </Link>
     </Wrapper>
   )

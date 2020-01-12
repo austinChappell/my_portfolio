@@ -8,6 +8,7 @@ import Details, { DetailsProps } from './Details';
 import Card from '../../../components/Card';
 import Text from '../../../components/Text';
 import Links, { LinksProps } from './Links';
+import Description from './Description';
 
 // Local Typings
 interface Props extends DetailsProps, LinksProps {
@@ -25,10 +26,11 @@ const Container = styled.li({
   '@media only screen and (max-width: 900px)': {
     width: '100%',
   },
-})
+});
 const Wrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
+  height: '100%',
 });
 
 // Component Definition
@@ -38,16 +40,12 @@ const PortfolioItem: React.FC<Props> = (props) => {
       <Card>
         <Wrapper>
           <Text
+            alignment="center"
             as="h3"
             fontSize="lg"
           >
             {props.title}
           </Text>
-
-          <Links
-            githubLink={props.githubLink}
-            siteLink={props.siteLink}
-          />
 
           <DesktopPreview
             screenshotProps={{
@@ -61,9 +59,14 @@ const PortfolioItem: React.FC<Props> = (props) => {
             title={props.title}
           />
 
-          <Text as="p">
+          <Description>
             {props.description}
-          </Text>
+          </Description>
+
+          <Links
+            githubLink={props.githubLink}
+            siteLink={props.siteLink}
+          />
         </Wrapper>
       </Card>
     </Container>
