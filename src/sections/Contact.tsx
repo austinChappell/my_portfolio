@@ -3,12 +3,18 @@ import React from 'react';
 
 // Internal Dependencies
 import Section from '../components/Section';
-import { ids } from '../constants';
+import {
+  colors,
+  ids,
+} from '../constants';
 
 // Component Definition
 const Contact: React.FC = () => {
   return (
-    <Section id={ids.contact}>
+    <Section
+      backgroundColor={colors.gray05}
+      id={ids.contact}
+    >
       Contact Section
     </Section>
   )
