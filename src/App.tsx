@@ -8,6 +8,7 @@ import Skills from './sections/Skills';
 import About from './sections/About';
 import Contact from './sections/Contact';
 import Nav from './components/Nav';
+import { ids } from './constants';
 
 // Component Definition
 const App: React.FC = () => {
@@ -17,10 +18,22 @@ const App: React.FC = () => {
 
       <Nav
         navItems={[
-          { label: 'Portfolio' },
-          { label: 'Skills' },
-          { label: 'About' },
-          { label: 'Contact' },
+          { 
+            label: 'Portfolio',
+            scrollToSelector: `#${ids.portfolio}`,
+          },
+          {
+            label: 'Skills',
+            scrollToSelector: `#${ids.skills}`,
+          },
+          {
+            label: 'About',
+            scrollToSelector: `#${ids.about}`,
+          },
+          {
+            label: 'Contact',
+            scrollToSelector: `#${ids.contact}`,
+          },
         ]}
       />
 

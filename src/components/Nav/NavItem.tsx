@@ -3,9 +3,13 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { colors, space } from '../../constants';
 
+// Internal Dependencies
+import { scrollToElement } from './helpers';
+
 // Local Typings
 export interface NavItemProps {
   label: string;
+  scrollToSelector: string;
 }
 
 // Local Variables
@@ -22,8 +26,12 @@ const ListItem = styled.li({
 
 // Component Definition
 const NavItem: React.FC<NavItemProps> = (props) => {
+  function handleClick() {
+    scrollToElement(props.scrollToSelector);
+  }
+
   return (
-    <ListItem>
+    <ListItem onClick={handleClick}>
       {props.label}
     </ListItem>
   )

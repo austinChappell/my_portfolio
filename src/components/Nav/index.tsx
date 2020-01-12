@@ -32,7 +32,7 @@ const Nav: React.FC<Props> = (props) => {
         {props.navItems.map(navItem => (
           <NavItem
             key={navItem.label}
-            label={navItem.label}
+            {...navItem}
           />
         ))}
       </NavItemList>
