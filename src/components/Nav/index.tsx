@@ -13,7 +13,7 @@ interface Props {
 }
 
 // Local Variables
-export const navHeight = 40;
+export const navHeight = 60;
 
 const Wrapper = styled.nav({
   alignItems: 'center',
