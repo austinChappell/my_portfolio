@@ -20,6 +20,12 @@ const Form = styled.form({
   display: 'flex',
   flexDirection: 'column',
 });
+const encode = (data: { [key: string]: any }) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 
 // Component Definition
 const ContactForm: React.FC = () => {
@@ -46,14 +52,36 @@ const ContactForm: React.FC = () => {
 
   const isFormValid = isEmailValid && isNameValid;
 
+  const handleSubmit = async (evt: React.FormEvent) => {
+    evt.preventDefault();
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          name: nameField.inputProps.value,
+          email: emailField.inputProps.value,
+          message: messageField.inputProps.value,
+        }),
+      });
+
+      console.log({ status: response.status });
+    } catch (error) {
+      console.log('the error : ', error);
+    }
+  };
+
   return (
     <Wrapper>
       <Card>
         <Form
-          data-netlify-honeypot="bot-field"
-          data-netlify="true"
-          method="post"
-          name="contact"
+          // data-netlify-honeypot="bot-field"
+          // data-netlify="true"
+          // method="post"
+          // name="contact"
+          onSubmit={handleSubmit}
         >
           <input
             name="form-name"
