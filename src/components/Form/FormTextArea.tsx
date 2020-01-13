@@ -21,7 +21,9 @@ interface TextAreaProps {
 // Local Variables
 const Label = styled.label({
   display: 'block',
+  maxWidth: 400,
   padding: space.md,
+  width: '100%',
 });
 const TextArea = styled.textarea<TextAreaProps>(props => ({
   border: `1px solid ${props.error ? colors.error : colors.gray80}`,
@@ -30,7 +32,7 @@ const TextArea = styled.textarea<TextAreaProps>(props => ({
   fontSize: 16,
   padding: space.sm,
   resize: 'none',
-  width: 400,
+  width: '100%',
 }));
 
 // Component Definition

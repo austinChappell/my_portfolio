@@ -18,7 +18,9 @@ interface InputProps {
 // Local Variables
 const Label = styled.label({
   display: 'block',
+  maxWidth: 400,
   padding: space.md,
+  width: '100%',
 });
 const Input = styled.input<InputProps>(props => ({
   border: `1px solid ${props.error ? colors.error : colors.gray80}`,
@@ -26,7 +28,7 @@ const Input = styled.input<InputProps>(props => ({
   display: 'block',
   fontSize: 16,
   padding: space.sm,
-  width: 400,
+  width: '100%',
 }));
 
 // Component Definition

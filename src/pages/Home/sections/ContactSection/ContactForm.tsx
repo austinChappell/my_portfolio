@@ -15,6 +15,7 @@ import FormTextArea from '../../../../components/Form/FormTextArea';
 const Wrapper = styled.div({
   margin: '0 auto',
   maxWidth: 600,
+  width: '100%',
 });
 const Form = styled.form({
   alignItems: 'center',
