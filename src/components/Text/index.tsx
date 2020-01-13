@@ -9,7 +9,7 @@ import {
 } from '../../constants';
 
 // Local Typings
-type FontColor = 'black' | 'white' | 'brand' | 'brandLight';
+type FontColor = 'black' | 'white' | 'brand' | 'brandLight' | 'error';
 type FontSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 interface Props {
   alignment?: 'left' | 'center' | 'right';
@@ -27,6 +27,7 @@ const fontColors: {
   black: colors.black,
   brand: colors.brand,
   brandLight: colors.brandLight,
+  error: colors.error,
   white: colors.white,
 };
 const fontSizes: {

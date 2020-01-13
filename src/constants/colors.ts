@@ -3,6 +3,7 @@ export const colors = {
   brand: '#364B9C',
   brandDark: '#2E3E82',
   brandLight: '#516FE8',
+  error: '#FF2417',
   gray05: '#f5f5f5',
   gray10: '#eeeeee',
   gray20: '#dddddd',

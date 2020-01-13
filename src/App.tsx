@@ -2,10 +2,10 @@
 import React from 'react';
 
 // Internal Dependencies
-import Welcome from './sections/Welcome';
-import Portfolio from './sections/Portfolio';
-import Skills from './sections/Skills';
-import Contact from './sections/Contact';
+import WelcomeSection from './sections/WelcomeSection';
+import PortfolioSection from './sections/PortfolioSection';
+import SkillsSection from './sections/SkillsSection';
+import ContactSection from './sections/ContactSection';
 import Nav from './components/Nav';
 import { ids } from './constants';
 
@@ -13,7 +13,7 @@ import { ids } from './constants';
 const App: React.FC = () => {
   return (
     <main>
-      <Welcome />
+      <WelcomeSection />
 
       <Nav
         navItems={[
@@ -32,9 +32,9 @@ const App: React.FC = () => {
         ]}
       />
 
-      <Portfolio />
-      <Skills />
-      <Contact />
+      <PortfolioSection />
+      <SkillsSection />
+      <ContactSection />
     </main>
   );
 }

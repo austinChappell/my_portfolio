@@ -8,9 +8,10 @@ import {
   ids,
 } from '../../constants';
 import SectionTitle from '../../components/SectionTitle';
+import ContactForm from './ContactForm';
 
 // Component Definition
-const Contact: React.FC = () => {
+const ContactSection: React.FC = () => {
   return (
     <Section
       backgroundColor={colors.brandDark}
@@ -19,8 +20,10 @@ const Contact: React.FC = () => {
       <SectionTitle light>
         Contact
       </SectionTitle>
+
+      <ContactForm />
     </Section>
   )
 }
 
-export default Contact;
+export default ContactSection;

@@ -59,7 +59,7 @@ const portfolioItems: SinglePortfolioItem[] = [
 ];
 
 // Component Definition
-const Portfolio: React.FC = () => {
+const PortfolioSection: React.FC = () => {
   return (
     <Section
       backgroundColor={colors.gray05}
@@ -89,4 +89,4 @@ const Portfolio: React.FC = () => {
   )
 }
 
-export default Portfolio;
+export default PortfolioSection;

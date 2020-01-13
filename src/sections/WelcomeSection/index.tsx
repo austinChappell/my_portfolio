@@ -31,7 +31,7 @@ const StyledSection = styled(Section)({
 });
       
 // Component Definition
-const Welcome: React.FC = () => {
+const WelcomeSection: React.FC = () => {
   return (
     <StyledSection
       backgroundColor={colors.black}
@@ -44,4 +44,4 @@ const Welcome: React.FC = () => {
   )
 }
 
-export default Welcome;
+export default WelcomeSection;
