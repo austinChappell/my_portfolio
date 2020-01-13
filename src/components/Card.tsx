@@ -14,6 +14,7 @@ const Card = styled.div({
   borderRadius: space.xs,
   boxShadow: `2px 2px 8px ${colors.black}22`,
   padding: space.lg,
+  width: '100%',
 });
 
 export default Card;

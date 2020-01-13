@@ -21,6 +21,7 @@ interface Props extends DetailsProps, LinksProps {
 const Container = styled.li({
   display: 'flex',
   margin: 20,
+  maxWidth: 400,
   width: '40%',
   
   '@media only screen and (max-width: 900px)': {
