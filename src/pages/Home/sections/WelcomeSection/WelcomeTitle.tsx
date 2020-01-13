@@ -51,22 +51,40 @@ const allCharCount = characters
 // Component Definition
 const WelcomeTitle: React.FC = () => {
   const [charCount, setCharCount] = useState(0);
+  const [isTyping, setIsTyping] = useState(false);
 
   let count = 0;
 
-  useEffect(() => {
+  function type() {
     let timeout: number;
-
+  
     if (charCount < allCharCount) {
       timeout = window.setTimeout(() => {
         setCharCount(charCount + 1);
       }, 80);
     }
-
-    return (() => {
+  
+    return () => {
       clearTimeout(timeout);
-    })
-  }, [charCount]);
+    }
+  }
+
+  useEffect(() => {
+    if (isTyping) {
+      type();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [charCount, isTyping]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsTyping(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    }
+  }, [])
 
   return (
     <Text

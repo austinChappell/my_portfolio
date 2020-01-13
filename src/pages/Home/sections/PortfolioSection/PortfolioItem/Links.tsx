@@ -46,6 +46,7 @@ const Links: React.FC<LinksProps> = (props) => {
     <Wrapper>
       <Link
         href={props.githubLink}
+        rel="noopener noreferrer"
         target="_blank"
       >
         View Code
@@ -53,6 +54,7 @@ const Links: React.FC<LinksProps> = (props) => {
 
       <Link
         href={props.siteLink}
+        rel="noopener noreferrer"
         target="_blank"
       >
         Visit Site

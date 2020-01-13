@@ -45,6 +45,7 @@ const SocialMedia: React.FC = () => {
         <ListItem key={link.iconName}>
           <a
             href={link.href}
+            rel="noopener noreferrer"
             target="_blank"
           >
             <Icon

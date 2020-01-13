@@ -58,6 +58,7 @@ const ContactSection: React.FC = () => {
 
           <Link
             href="/chappell-resume.pdf"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Resume
@@ -65,6 +66,7 @@ const ContactSection: React.FC = () => {
 
           <Link
             href="https://medium.com/@AWCwebdeveloper"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Blog
