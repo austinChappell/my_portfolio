@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Internal Dependencies
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import ContactSuccess from './pages/ContactSuccess';
 
@@ -22,6 +23,8 @@ const App: React.FC = () => {
           path="/contact"
         />
       </Switch>
+
+      <Footer />
     </Router>
   );
 }
