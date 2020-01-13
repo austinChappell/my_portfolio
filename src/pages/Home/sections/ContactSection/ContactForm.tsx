@@ -1,6 +1,7 @@
 // External Dependencies
 import styled from '@emotion/styled';
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import validator from 'validator';
 
 // Internal Dependencies
@@ -26,9 +27,8 @@ const encode = (data: { [key: string]: any }) => {
     .join("&");
 }
 
-
 // Component Definition
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC<RouteComponentProps> = (props) => {
   const botField = useTextField();
   const nameField = useTextField();
   const emailField = useTextField();
@@ -67,9 +67,11 @@ const ContactForm: React.FC = () => {
         }),
       });
 
-      console.log({ status: response.status });
+      if (response.status === 200) {
+        props.history.push('/contact');
+      }
     } catch (error) {
-      console.log('the error : ', error);
+      alert(error);
     }
   };
 
@@ -137,4 +139,4 @@ const ContactForm: React.FC = () => {
   )
 }
 
-export default ContactForm;
+export default withRouter(ContactForm);
