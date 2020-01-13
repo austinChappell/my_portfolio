@@ -11,12 +11,6 @@ import Button from '../../components/Button';
 import FormTextArea from '../../components/Form/FormTextArea';
 
 // Local Variables
-const encode = (data: { [key: string]: any; }) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 const Wrapper = styled.div({
   margin: '0 auto',
   maxWidth: 600,
@@ -52,42 +46,14 @@ const ContactForm: React.FC = () => {
 
   const isFormValid = isEmailValid && isNameValid;
 
-  const handleSubmit = async (evt: React.FormEvent) => {
-    evt.preventDefault();
-
-    if (botField.inputProps.value.trim().length > 0) {
-      return;
-    }
-
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          name: nameField.inputProps.value,
-          email: emailField.inputProps.value,
-          message: messageField.inputProps.value,
-        })
-      })
-
-      alert('Success!');
-    } catch (error) {
-      alert(error);
-      console.error('unable to submit');
-    }
-  };
-
-
-
   return (
     <Wrapper>
       <Card>
         <Form
-          // action="/contact"
-          // data-netlify-honeypot="bot-field"
+          action="/contact"
+          data-netlify-honeypot="bot-field"
           data-netlify="true"
-          // method="post"
+          method="post"
           name="contact"
           onSubmit={handleSubmit}
         >
