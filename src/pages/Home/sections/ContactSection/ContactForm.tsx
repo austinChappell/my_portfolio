@@ -51,7 +51,7 @@ const ContactForm: React.FC<RouteComponentProps> = (props) => {
   const nameErrorMessage = nameField.isTouched && !isNameValid ? 'Required' : null;
   const messageErrorMessage = messageField.isTouched && !isMessageValid ? 'Message must be at least 6 characters.' : null;
 
-  const isFormValid = isEmailValid && isNameValid;
+  const isFormValid = isEmailValid && isNameValid && isMessageValid;
 
   const handleSubmit = async (evt: React.FormEvent) => {
     evt.preventDefault();
