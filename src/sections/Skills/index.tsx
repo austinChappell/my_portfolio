@@ -10,9 +10,10 @@ import {
 import SectionTitle from '../../components/SectionTitle';
 import Container from '../../components/Container';
 import Bio from './Bio';
+import Skills from './Skills';
 
 // Component Definition
-const Skills: React.FC = () => {
+const SkillsSection: React.FC = () => {
   return (
     <Section
       backgroundColor={colors.white}
@@ -23,10 +24,12 @@ const Skills: React.FC = () => {
           Skills
         </SectionTitle>
 
+        <Skills />
+
         <Bio />
       </Container>
     </Section>
   )
 }
 
-export default Skills;
+export default SkillsSection;

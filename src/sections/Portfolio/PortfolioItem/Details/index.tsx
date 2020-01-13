@@ -24,14 +24,13 @@ const Wrapper = styled.div({
 });
 const List = styled.ul({
   display: 'flex',
-  listStyle: 'none',
-  padding: 0,
 });
 const ListItem = styled.li({
   alignItems: 'center',
   borderBottom: `2px solid ${colors.brand}`,
   color: colors.brand,
   display: 'flex',
+  justifyContent: 'center',
   marginRight: space.lg,
   padding: `${space.xs}px`,
 });

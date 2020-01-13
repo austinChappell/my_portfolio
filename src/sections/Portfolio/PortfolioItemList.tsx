@@ -7,9 +7,7 @@ const PortfolioItemList = styled.ul({
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
-  listStyle: 'none',
   margin: 0,
-  padding: 0,
 });
 
 export default PortfolioItemList;
