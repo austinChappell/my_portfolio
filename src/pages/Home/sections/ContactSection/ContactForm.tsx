@@ -50,7 +50,6 @@ const ContactForm: React.FC = () => {
     <Wrapper>
       <Card>
         <Form
-          action="/contact"
           data-netlify-honeypot="bot-field"
           data-netlify="true"
           method="post"
