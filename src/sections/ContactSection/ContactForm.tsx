@@ -55,7 +55,6 @@ const ContactForm: React.FC = () => {
           data-netlify="true"
           method="post"
           name="contact"
-          onSubmit={handleSubmit}
         >
           <input
             name="form-name"
