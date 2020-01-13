@@ -12,18 +12,18 @@ const ScreenWrapper = styled.div({
   backgroundColor: colors.black,
   border: `8px solid ${colors.black}`,
   borderRadius,
-  position: 'relative',
 });
 const ScreenGloss = styled.div({
   background: `linear-gradient(-45deg, ${colors.white} 0%, white 27%, transparent 29%)`,
-  opacity: 0.2,
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
+  borderRadius,
   bottom: 0,
+  left: 0,
+  opacity: 0.4,
+  position: 'absolute',
+  right: 0,
+  top: 0,
 });
-const ComputerBottom = styled.div({
+const ComputerBase = styled.div({
   background: `linear-gradient(180deg, ${computerTrimColor} 0%, ${computerTrimColor} 50%, ${colors.gray70} 100%)`,
   border: `1px solid ${colors.gray50}`,
   borderBottomLeftRadius: 4,
@@ -33,13 +33,19 @@ const ComputerBottom = styled.div({
   height: 6,
   marginTop: -2,
 });
-const ComputerBottomCircle = styled.div({
+const ComputerBaseNotch = styled.div({
   backgroundColor: colors.gray70,
   borderBottomLeftRadius: 4,
   borderBottomRightRadius: 4,
   height: 3,
   width: 50,
 })
+const ScreenBorder = styled.div({
+  backgroundColor: colors.black,
+  border: `2px solid ${colors.black}`,
+  borderRadius: borderRadius + 2,
+  position: 'relative',
+});
 const ComputerWrapper = styled.div({
   backgroundColor: computerTrimColor,
   border: `2px solid ${computerTrimColor}`,
@@ -63,17 +69,19 @@ const Computer: React.FC = (props) => {
     <Container>
       <ComputerTrim>
         <ComputerWrapper>
-          <ScreenWrapper>
-            {props.children}
+          <ScreenBorder>
+            <ScreenWrapper>
+              {props.children}
+            </ScreenWrapper>
 
             <ScreenGloss />
-          </ScreenWrapper>
+          </ScreenBorder>
         </ComputerWrapper>
       </ComputerTrim>
 
-      <ComputerBottom>
-        <ComputerBottomCircle />
-      </ComputerBottom>
+      <ComputerBase>
+        <ComputerBaseNotch />
+      </ComputerBase>
     </Container>
   )
 }

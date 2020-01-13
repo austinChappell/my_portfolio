@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
-import DesktopPreview from './DesktopPreview';
+import LaptopPreview from './LaptopPreview';
 import Details, { DetailsProps } from './Details';
 import Card from '../../../components/Card';
 import Text from '../../../components/Text';
@@ -47,7 +47,7 @@ const PortfolioItem: React.FC<Props> = (props) => {
             {props.title}
           </Text>
 
-          <DesktopPreview
+          <LaptopPreview
             screenshotProps={{
               alt: props.imageAltName,
               fileName: props.imageFileName,
