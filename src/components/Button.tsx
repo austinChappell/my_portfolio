@@ -9,10 +9,11 @@ import {
 
 // Component Definition
 const Button = styled.button({
-  border: 'none',
+  border: `1px solid ${colors.white}`,
   backgroundColor: colors.brand,
   borderRadius: space.xs,
   color: colors.white,
+  cursor: 'pointer',
   fontSize: 16,
   margin: space.xs,
   minWidth: 100,

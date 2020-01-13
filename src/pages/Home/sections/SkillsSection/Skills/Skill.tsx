@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
-import Text from '../../../components/Text';
-import { space } from '../../../constants';
+import Text from '../../../../../components/Text';
+import { space } from '../../../../../constants';
 
 // Local Typings
 export interface SkillProps {
@@ -26,7 +26,7 @@ const Wrapper = styled.li({
 
 // Component Definition
 const Skill: React.FC<SkillProps> = (props) => {
-  const src = require(`../../../assets/images/skills/${props.imageFileName}`);
+  const src = require(`../../../../../assets/images/skills/${props.imageFileName}`);
 
   return (
     <Wrapper>

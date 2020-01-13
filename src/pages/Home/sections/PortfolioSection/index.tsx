@@ -2,15 +2,15 @@
 import React from 'react';
 
 // Internal Dependencies
-import Section from '../../components/Section';
+import Section from '../../../../components/Section';
 import {
   colors,
   ids,
-} from '../../constants';
+} from '../../../../constants';
 import PortfolioItem from './PortfolioItem';
 import PortfolioItemList from './PortfolioItemList';
-import Container from '../../components/Container';
-import SectionTitle from '../../components/SectionTitle';
+import Container from '../../../../components/Container';
+import SectionTitle from '../../../../components/SectionTitle';
 
 // Local Typings
 interface SinglePortfolioItem {

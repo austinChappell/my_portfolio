@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Internal Dependencies
-import Text from '../../components/Text';
+import Text from '../../../../components/Text';
 import Cursor from './Cursor';
 
 // Local Typings

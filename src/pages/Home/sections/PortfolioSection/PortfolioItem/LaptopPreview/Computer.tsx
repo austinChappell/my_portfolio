@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
-import { colors, space } from '../../../../constants';
+import { colors, space } from '../../../../../../constants';
 
 // Local Variables
 const borderRadius = 6;

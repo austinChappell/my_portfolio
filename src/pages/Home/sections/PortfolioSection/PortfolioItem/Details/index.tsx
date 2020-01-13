@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
-import Text from '../../../../components/Text';
-import { space, colors } from '../../../../constants';
+import Text from '../../../../../../components/Text';
+import { space, colors } from '../../../../../../constants';
 
 // Local Typings
 export interface DetailsProps {

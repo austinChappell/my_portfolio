@@ -4,11 +4,11 @@ import React from 'react';
 import validator from 'validator';
 
 // Internal Dependencies
-import { useTextField } from '../../hooks';
-import FormInput from '../../components/Form/FormInput';
-import Card from '../../components/Card';
-import Button from '../../components/Button';
-import FormTextArea from '../../components/Form/FormTextArea';
+import { useTextField } from '../../../../hooks';
+import FormInput from '../../../../components/Form/FormInput';
+import Card from '../../../../components/Card';
+import Button from '../../../../components/Button';
+import FormTextArea from '../../../../components/Form/FormTextArea';
 
 // Local Variables
 const Wrapper = styled.div({

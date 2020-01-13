@@ -5,8 +5,8 @@ import React from 'react';
 // Internal Dependencies
 import LaptopPreview from './LaptopPreview';
 import Details, { DetailsProps } from './Details';
-import Card from '../../../components/Card';
-import Text from '../../../components/Text';
+import Card from '../../../../../components/Card';
+import Text from '../../../../../components/Text';
 import Links, { LinksProps } from './Links';
 import Description from './Description';
 

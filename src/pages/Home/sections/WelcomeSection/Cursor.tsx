@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import {
   colors,
   space,
-} from '../../constants';
+} from '../../../../constants';
 
 // Local Typings
 interface LineProps {

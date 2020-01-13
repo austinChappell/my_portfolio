@@ -6,7 +6,7 @@ import React from 'react';
 import {
   colors,
   space,
-} from '../../../constants';
+} from '../../../../../constants';
 
 // Local Typings
 export interface LinksProps {

@@ -2,12 +2,12 @@
 import React from 'react';
 
 // Internal Dependencies
-import Section from '../../components/Section';
+import Section from '../../../../components/Section';
 import {
   colors,
   ids,
-} from '../../constants';
-import SectionTitle from '../../components/SectionTitle';
+} from '../../../../constants';
+import SectionTitle from '../../../../components/SectionTitle';
 import ContactForm from './ContactForm';
 
 // Component Definition

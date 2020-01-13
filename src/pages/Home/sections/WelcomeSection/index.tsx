@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 // Internal Dependencies
-import Section from '../../components/Section';
+import Section from '../../../../components/Section';
 import {
   colors,
   ids,
-} from '../../constants';
+} from '../../../../constants';
 import WelcomeTitle from './WelcomeTitle';
-import watermarkLogo from '../../assets/images/watermark_logo.svg';
+import watermarkLogo from '../../../../assets/images/watermark_logo.svg';
 
 // Local Variables
 const FullAbsolute = styled.div({

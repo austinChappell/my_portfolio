@@ -2,13 +2,13 @@
 import React from 'react';
 
 // Internal Dependencies
-import Section from '../../components/Section';
+import Section from '../../../../components/Section';
 import {
   colors,
   ids,
-} from '../../constants';
-import SectionTitle from '../../components/SectionTitle';
-import Container from '../../components/Container';
+} from '../../../../constants';
+import SectionTitle from '../../../../components/SectionTitle';
+import Container from '../../../../components/Container';
 import Bio from './Bio';
 import Skills from './Skills';
 

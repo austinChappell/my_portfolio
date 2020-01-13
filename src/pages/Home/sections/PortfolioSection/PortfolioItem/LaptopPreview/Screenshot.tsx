@@ -16,7 +16,7 @@ const Image = styled.img({
 
 // Component Definition
 const Screenshot: React.FC<ScreenshotProps> = (props) => {
-  const [src] = useState(require(`../../../../assets/images/project_screenshots/${props.fileName}.png`));
+  const [src] = useState(require(`../../../../../../assets/images/project_screenshots/${props.fileName}.png`));
 
   return (
     <Image
