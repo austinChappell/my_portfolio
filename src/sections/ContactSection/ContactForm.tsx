@@ -86,9 +86,9 @@ const ContactForm: React.FC = () => {
         <Form
           // action="/contact"
           // data-netlify-honeypot="bot-field"
-          // data-netlify="true"
+          data-netlify="true"
           // method="post"
-          // name="contact"
+          name="contact"
           onSubmit={handleSubmit}
         >
           <input
