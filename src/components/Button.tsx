@@ -22,6 +22,11 @@ const Button = styled.button({
 
   '&:disabled': {
     backgroundColor: colors.gray70,
+    cursor: 'auto',
+  },
+
+  '&:disabled:hover': {
+    backgroundColor: colors.gray70,
   },
 
   '&:hover': {
