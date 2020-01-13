@@ -5,6 +5,13 @@ import React from 'react';
 // Internal Dependencies
 import Icon from '../../../../components/Icon';
 import { space } from '../../../../constants';
+import { IconName } from '../../../../components/Icon/svg-data';
+
+// Local Typings
+interface Link {
+  href: string;
+  iconName: IconName;
+}
 
 // Local Variables
 const iconSize = 40;
@@ -19,39 +26,35 @@ const ListItem = styled.li({
   margin: space.sm,
 });
 
+const links: Link[] = [
+  {
+    href: 'https://twitter.com/AWCwebdeveloper',
+    iconName: 'twitter',
+  },
+  {
+    href: 'https://github.com/austinChappell',
+    iconName: 'github',
+  },
+]
+
 // Component Definition
 const SocialMedia: React.FC = () => {
   return (
     <List>
-      <ListItem>
-        <a href="https://twitter.com/AWCwebdeveloper">
-          <Icon
-            color="white"
-            name="twitter"
-            size={iconSize}
-          />
-        </a>
-      </ListItem>
-
-      <ListItem>
-        <a href="https://github.com/austinChappell">
-          <Icon
-            color="white"
-            name="github"
-            size={iconSize}
-          />
-        </a>
-      </ListItem>
-
-      <ListItem>
-        <a href="https://medium.com/@AWCwebdeveloper">
-          <Icon
-            color="white"
-            name="medium"
-            size={iconSize - 8}
-          />
-        </a>
-      </ListItem>
+      {links.map(link => (
+        <ListItem key={link.iconName}>
+          <a
+            href={link.href}
+            target="_blank"
+          >
+            <Icon
+              color="white"
+              name={link.iconName}
+              size={iconSize}
+            />
+          </a>
+        </ListItem>
+      ))}
     </List>
   )
 }

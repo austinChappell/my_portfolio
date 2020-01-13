@@ -56,8 +56,18 @@ const ContactSection: React.FC = () => {
 
           <SocialMedia />
 
-          <Link href="/chappell-resume.pdf">
+          <Link
+            href="/chappell-resume.pdf"
+            target="_blank"
+          >
             Resume
+          </Link>
+
+          <Link
+            href="https://medium.com/@AWCwebdeveloper"
+            target="_blank"
+          >
+            Blog
           </Link>
         </Flex>
       </Container>
