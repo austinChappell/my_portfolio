@@ -78,13 +78,7 @@ const ContactForm: React.FC<RouteComponentProps> = (props) => {
   return (
     <Wrapper>
       <Card>
-        <Form
-          // data-netlify-honeypot="bot-field"
-          // data-netlify="true"
-          // method="post"
-          // name="contact"
-          onSubmit={handleSubmit}
-        >
+        <Form onSubmit={handleSubmit}>
           <input
             name="form-name"
             type="hidden"
