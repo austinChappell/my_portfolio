@@ -29,7 +29,7 @@ const portfolioItems: SinglePortfolioItem[] = [
     fileName: 'chess_game',
     githubLink: 'https://github.com/austinChappell/chess-game-react',
     label: 'Chess Game',
-    siteLink: 'https://ellee-bakery.herokuapp.com',
+    siteLink: 'https://chess-game-react.herokuapp.com',
     technologies: ['React', 'Node', 'MongoDB', 'socket.io'],
   },
   {
@@ -37,7 +37,7 @@ const portfolioItems: SinglePortfolioItem[] = [
     fileName: 'ellee_bakery',
     githubLink: 'https://github.com/austinChappell/ellee-bakery-node',
     label: 'Ellee Bakery',
-    siteLink: 'https://www.google.com',
+    siteLink: 'https://ellee-bakery.herokuapp.com',
     technologies: ['Node', 'EJS', 'MongoDB', 'Stripe'],
   },
   {
